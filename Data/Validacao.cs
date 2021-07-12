@@ -27,7 +27,7 @@ namespace Data
             {
                 string ValSn = Console.ReadLine().Trim();
 
-                while (ValSn != "n" || ValSn != "s")  
+                while (ValSn != "n" || ValSn != "y")  
                 {
                     Console.WriteLine("Resposta Invalida Digite Novamente:");
                     ValSn = Console.ReadLine().Trim();

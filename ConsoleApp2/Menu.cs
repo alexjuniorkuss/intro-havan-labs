@@ -53,10 +53,21 @@ namespace ConsoleApp2
                         string resposta = "";
                         // cria uma lista para usuario cria uma lista de dado do tipo usuar
                         List<Usuario> usuarios = new List<Usuario>();
+                    
                         do
                         {
                             Usuario user = new Usuario();
-                            user.Cadastro();
+                            Console.WriteLine("Digite seu nome:");
+                            string nome = Validacao.ValidaStringEmBranco();
+                            Console.WriteLine("Digite seu Sobrenome:");
+                            string sobrenome = Validacao.ValidaStringEmBranco();
+                            Console.WriteLine("Digite sua Idade:");
+                            int idade = Validacao.ValidaInteiros();
+                            Console.WriteLine("Digite seu Email:");
+                            string email = Validacao.ValidaStringEmBranco();
+                            Console.WriteLine("Digite seu Endereço:");
+                            string endereco = Validacao.ValidaStringEmBranco();
+                            user.Cadastro(nome, sobrenome, idade, email, endereco);
                             Console.WriteLine("Deseja Cadastrar mais um? (y/n)");
                             resposta = Validacao.ValidaStringEmBranco();
                             resposta = Validacao.ValidaSn();
@@ -69,7 +80,7 @@ namespace ConsoleApp2
                         Console.Clear();
                         foreach (var item in usuarios)
                         {
-                            Console.WriteLine($"Usuario: -\n nome:{item.nome.ToLower()}\n sobrenome: {item.sobrenome.ToLower()}\n idade: {item.idade}\n email: {item.email.ToLower()}\n endereco: {item.endereco.ToLower()}");
+                            Console.WriteLine($"Usuario: -\n nome:{item.nome.ToLower()}\n sobrenome: {item.Sobrenome.ToLower()}\n idade: {item.Idade}\n email: {item.Email.ToLower()}\n endereco: {item.Endereco.ToLower()}");
                         }
                         break;
                     case 2:
