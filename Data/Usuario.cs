@@ -20,6 +20,14 @@ namespace Data
         {
             
         }
+        public Usuario(string nome, string sobrenome, int idade, string email, string endereco)
+        {
+            Nome = nome;
+            Sobrenome = sobrenome;
+            Idade = idade;
+            Email = email;
+            Endereco = endereco;
+        }
 
 
 
